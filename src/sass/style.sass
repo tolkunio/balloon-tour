@@ -1,16 +1,34 @@
-*
+$color-white: #FAFAFA
+$color-grey: #777777
+$color-black: #000000
+$color-brown-dark: #A14F03
+$color-brown-black: #BA8554
+$color-brown-light: #C3956A
+$color-brown-normal: #BA8554
+$box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.5)
+
+@mixin style-link($color)
+  text-decoration: none
+  text-transform: uppercase
+  color: $color
+  display: inline-block
+
+*, ::after, ::before
   margin: 0
   padding: 0
   box-sizing: border-box
 
+html
+  font-size: 62.5%
+
 body
   font-family: "Lato", serif
   font-weight: 400
-  color: #777777
-  font-size: 16px
-  letter-spacing: 2px
-  padding: 50px
-  background-color: white
+  color: $color-grey
+  font-size: 1.6rem
+  letter-spacing: .2rem
+  padding: 5rem
+  background-color: $color-white
 
 .container
   background-color: #F7F7F7
@@ -23,10 +41,10 @@ body
 
   &__logo
     position: absolute
-    left: 50px
-    top: 50px
-    height: 70px
-    width: 56px
+    left: 5rem
+    top: 5rem
+    height: 7rem
+    width: 5.6rem
 
   &__box
     position: absolute
@@ -42,11 +60,11 @@ body
   &__main
     display: block
     font-weight: 800
-    font-size: 50px
-    line-height: 60px
-    letter-spacing: 10px
+    font-size: 5rem
+    line-height: 6rem
+    letter-spacing: 1rem
     text-transform: uppercase
-    margin-bottom: 10px
+    margin-bottom: 1rem
     animation-name: leftToRight
     animation-duration: 2s
     animation-timing-function: ease
@@ -56,30 +74,32 @@ body
   &__secondary
     display: block
     font-weight: 100
-    font-size: 40px
-    line-height: 48px
-    letter-spacing: 5px
+    font-size: 4rem
+    line-height: 4.8rem
+    letter-spacing: .5rem
     animation-name: rightToLeft
     animation-duration: 2s
     animation-timing-function: ease
     animation-delay: 2s
     backface-visibility: hidden
-    margin-bottom: 65px
+    margin-bottom: 6.5rem
 
 .btn
   position: relative
-  display: inline-block
-  text-transform: uppercase
-  text-decoration: none
-  color: grey
-  padding: 15px 40px
-  background-color: white
-  border-radius: 50px
+  @include style-link($color-grey)
+  padding: 1.5rem 4rem
+  background-color: $color-white
+  border-radius: 5rem
   transition: all .3s
+
+  &_animated
+    animation: btnToUp .5s ease-out .7s
+    animation-fill-mode: backwards
 
   &:hover
     transform: translateY(-4px)
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.5)
+    box-shadow: $box-shadow
+
     &::after
       opacity: 0
       transform: scaleX(1.5) scaleY(1.7)
@@ -93,19 +113,20 @@ body
     left: 0
     z-index: -1
     content: ''
-    background: white
+    background: $color-white
     width: 100%
     height: 100%
-    border-radius: 50px
+    border-radius: 5rem
     display: inline-block
     transition: all .4s
+
 
 @keyframes leftToRight
   0%
     opacity: 0
-    transform: translateX(-100px)
+    transform: translateX(-10rem)
   20%
-    transform: translateX(10px)
+    transform: translateX(1rem)
 
   100%
     opacity: 1
@@ -114,10 +135,19 @@ body
 @keyframes rightToLeft
   0%
     opacity: 0
-    transform: translateX(100px)
+    transform: translateX(10rem)
   20%
-    transform: translateX(-10px)
+    transform: translateX(-1rem)
 
   100%
     opacity: 1
     transform: translateX(0px)
+
+@keyframes btnToUp
+  0%
+    opacity: 0
+    transform: translateY(5rem)
+
+  100%
+    opacity: 1
+    transform: translateY(0px)
