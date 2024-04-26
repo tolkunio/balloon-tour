@@ -120,7 +120,29 @@ body
     display: inline-block
     transition: all .4s
 
+.section-about
+  text-align: center
+  padding-top: 8rem
+  font-size: 3.6rem
+  letter-spacing: 1rem
+  text-transform: uppercase
+  font-weight: 800
+  background: linear-gradient(90deg,rgba($color-brown-light,0.7) 0.03%,rgba($color-brown-black,0.7) 99.94%)
+  -webkit-background-clip: text
+  color: transparent
+  transition: all .4s
+  backface-visibility: hidden
+  &:hover
+    transform: skewY(2deg) skewX(15deg) scale(1)
+    text-shadow: 0 .4rem .4rem rgba($color-black,.25)
 
+
+
+
+
+/*utilities*/
+.margin-bottom-80px
+  margin-bottom: 8rem
 @keyframes leftToRight
   0%
     opacity: 0
