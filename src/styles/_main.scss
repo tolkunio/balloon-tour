@@ -209,6 +209,34 @@ body {
 .popular-grid-container{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 3rem;
+}
+.popular-grid-item{
+  &__side{
+    &_img{
+    }
+    &_title{
+
+    }
+    &_text{
+
+    }
+    &_front{
+    background-color: greenyellow;
+    }
+    &_back{
+      background-color: $color-brown-normal;
+      transform: rotateY(180deg);
+    }
+    &:hover &__side_front{
+      transform: rotateY(180deg);
+    }
+    &:hover &__side_back{
+      transform: rotateY(0deg);
+    }
+  }
+
+
 }
 
 /**keyframes**/

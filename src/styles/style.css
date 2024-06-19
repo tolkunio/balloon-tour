@@ -191,6 +191,21 @@ body {
 .popular-grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 3rem;
+}
+
+.popular-grid-item__side_front {
+  background-color: greenyellow;
+}
+.popular-grid-item__side_back {
+  background-color: #BA8554;
+  transform: rotateY(180deg);
+}
+.popular-grid-item__side:hover .popular-grid-item__side__side_front {
+  transform: rotateY(180deg);
+}
+.popular-grid-item__side:hover .popular-grid-item__side__side_back {
+  transform: rotateY(0deg);
 }
 
 /**keyframes**/
