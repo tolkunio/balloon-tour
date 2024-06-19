@@ -1,0 +1,311 @@
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  padding: 5rem;
+  color: #777777;
+  background-color: #F7F7F7;
+}
+
+.container {
+  background-color: #F7F7F7;
+}
+
+.header {
+  position: relative;
+  height: 95vh;
+  background: linear-gradient(90deg, rgba(105, 71, 40, 0.5) 0.03%, rgba(8, 8, 8, 0.5) 99.94%), url(../assets/img/header-background.jpg) center/cover no-repeat;
+  clip-path: polygon(0 0, 100% 1%, 100% 100%, 0 80%);
+}
+.header__logo {
+  position: absolute;
+  left: 5rem;
+  top: 5rem;
+  height: 7rem;
+  width: 5.6rem;
+}
+.header__box {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+}
+
+.title-first {
+  color: #FFFFFF;
+}
+.title-first__main {
+  display: block;
+  font-weight: 800;
+  font-size: 5rem;
+  line-height: 6rem;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  animation-name: leftToRight;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-delay: 2s;
+  backface-visibility: hidden;
+}
+.title-first__secondary {
+  display: block;
+  font-weight: 100;
+  font-size: 4rem;
+  line-height: 4.8rem;
+  letter-spacing: 0.5rem;
+  animation-name: rightToLeft;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-delay: 2s;
+  backface-visibility: hidden;
+  margin-bottom: 6.5rem;
+}
+
+.about-section {
+  padding-bottom: 1rem;
+}
+
+.title-secondary {
+  text-align: center;
+  font-size: 3.6rem;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(161, 79, 3, 0.7) 99.94%);
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all 0.4s;
+  backface-visibility: hidden;
+}
+.title-secondary:hover {
+  transform: skewY(2deg) skewX(15deg) scale(1);
+  text-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 6rem;
+}
+
+.title-third {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  letter-spacing: 0.2rem;
+  color: #777777;
+}
+
+.p-about {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.2rem;
+  letter-spacing: 0.2rem;
+  color: #777777;
+}
+
+.composition {
+  position: relative;
+}
+.composition__photo {
+  width: 55%;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 0.5rem;
+  position: absolute;
+  outline-offset: 1rem;
+}
+.composition__photo_n1 {
+  top: 0;
+  left: 0;
+}
+.composition__photo_n2 {
+  top: 11rem;
+  left: 2.6rem;
+}
+.composition__photo_n3 {
+  top: 5.5rem;
+  left: 16.7rem;
+}
+.composition__photo:hover {
+  transform: scale(1.1);
+  z-index: 20;
+  outline: 0.5rem solid #BA8554;
+}
+.composition:hover .composition__photo:not(:hover) {
+  transform: scale(0.95);
+}
+
+.adventure-section {
+  padding: 21rem 0;
+  background: linear-gradient(90deg, rgba(105, 71, 40, 0.5) -0.81%, rgba(8, 8, 8, 0) -0.8%), url(../assets/img/adventure-background.jpg) center/cover no-repeat;
+  clip-path: polygon(0 0, 100% 9%, 100% 99%, 0 89%);
+}
+
+.adventure-grid-container {
+  padding: 10rem 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 3rem;
+}
+
+.adventure-grid-item {
+  padding: 2.5rem;
+  background-color: rgba(250, 250, 250, 0.8);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+.adventure-grid-item:hover {
+  transform: translateY(-1.5rem) scale(1.03);
+  transition: 0.3s all;
+}
+.adventure-grid-item_icon {
+  display: inline-block;
+  font-size: 6rem;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(161, 79, 3, 0.7) 99.94%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.adventure-grid-item_p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.9rem;
+  letter-spacing: 0.2rem;
+  color: #777777;
+}
+
+.popular-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/**keyframes**/
+@keyframes leftToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  20% {
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes rightToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  20% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes btnToUp {
+  0% {
+    opacity: 0;
+    transform: translateY(5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+/*utilities*/
+.margin-bottom-80px {
+  margin-bottom: 8rem;
+}
+
+.margin-bottom-24px {
+  margin-bottom: 2.4rem;
+}
+
+.margin-bottom-30px {
+  margin-bottom: 3rem;
+}
+
+.margin-bottom-10px {
+  margin-bottom: 1rem;
+}
+
+.btn {
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #777777;
+  display: inline-block;
+  padding: 1.5rem 4rem;
+  background-color: #FAFAFA;
+  border-radius: 5rem;
+  transition: all 0.3s;
+}
+.btn_animated {
+  animation: btnToUp 0.5s ease-out 0.7s;
+  animation-fill-mode: backwards;
+}
+.btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.5);
+}
+.btn:hover::after {
+  opacity: 0;
+  transform: scaleX(1.5) scaleY(1.7);
+}
+.btn:active {
+  transform: translateY(-2px);
+}
+.btn::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  content: "";
+  background: #FAFAFA;
+  width: 100%;
+  height: 100%;
+  border-radius: 5rem;
+  display: inline-block;
+  transition: all 0.4s;
+}
+
+.btn-text {
+  text-decoration: none;
+  color: #777777;
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.92rem;
+  letter-spacing: 0.2rem;
+  padding: 1.2rem;
+  border-bottom: 1px solid #BA8554;
+}
+.btn-text:hover {
+  background-color: #BA8554;
+  color: #FAFAFA;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.5);
+  transform: translateY(-0.2rem);
+}
+.btn-text:active {
+  transform: translateY(0);
+}
+
+/*# sourceMappingURL=style.css.map */

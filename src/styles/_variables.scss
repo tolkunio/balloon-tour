@@ -1,0 +1,16 @@
+$color-white: #FAFAFA;
+$color-grey:#777777;
+$color-light-grey:#F7F7F7;
+$color-black:#000000;
+$color-brown-black: #A14F03;
+$color-brown-normal: #BA8554;
+$gradient-brown-light: linear-gradient(#C3956A, $color-brown-black);
+$gradient-brown-black:linear-gradient($color-brown-normal,$color-black);
+$box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.5);
+$text-shadow:0 .4rem .4rem rgba($color-black, .25);
+@mixin style-link($color){
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $color;
+  display: inline-block;
+}

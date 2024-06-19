@@ -5,40 +5,92 @@
     <title>Balloon travel app</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="assets/fonts/font-icon.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <img class="header__logo" src="./assets/icons/logo.svg" alt="Логотип воздушный шар">
-            <div class="header__box">
-                <h1 class="title-first">
-                    <span class="title-first__main">ТУРЫ НА ВОЗДУШНОМ ШАРЕ</span>
-                    <span class="title-first__secondary">
+<div class="container">
+    <header class="header">
+        <img class="header__logo" src="./assets/icons/logo.svg" alt="Логотип воздушный шар">
+        <div class="header__box">
+            <h1 class="title-first">
+                <span class="title-first__main">ТУРЫ НА ВОЗДУШНОМ ШАРЕ</span>
+                <span class="title-first__secondary">
                         незабываемое приключение ждет вас
                     </span>
-                </h1>
-                <a class="btn btn_animated">
-                    наш каталог
-                </a>
+            </h1>
+            <a class="btn btn_animated">
+                наш каталог
+            </a>
+        </div>
+    </header>
+    <main>
+        <section class="about-section">
+            <div class="margin-bottom-80px">
+                <h2 class="title-secondary">невероятное ощущение свободы</h2>
             </div>
-        </header>
-        <main>
-            <section class="section-about">
-                <div class="margin-bottom-80px">
-                    <h2 class="title-second">невероятное ощущение свободы</h2>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <h3 class="title-third margin-bottom-10px">ПОЗВОЛЬТЕ СЕБЕ ПРИКЛЮЧЕНИЕ</h3>
+                    <p class="p-about margin-bottom-30px">Задача организации, в особенности же дальнейшее развитие
+                        различных форм
+                        деятельности влечет за собой процесс внедрениям и модернизации соответствующий условий
+                        активизации. Таким образом начало повседневной работы по формированию позиции влечет.</p>
+                    <h3 class="title-third margin-bottom-10px">ВВЕРХ НА 6000 МЕТРОВ НАД УРОВНЕМ МОРЯ</h3>
+                    <p class="p-about margin-bottom-30px">
+                        Задача организации, в особенности же дальнейшее развитие различных форм деятельности влечет за
+                        собой процесс внедрения и модернизации соответствующий условий активизации. Таким образом начало
+                        повседневной работы по формированию позиции влечет.
+                    </p>
+                    <a href="" class="btn-text">Узнать больше &rarr;</a>
                 </div>
-                <div class="grid-container">
-                    <div class="col1">
-                        Текст
-                    </div>
-                    <div class="col1">
-                        Изображение
+                <div class="grid-item">
+                    <div class="composition">
+                        <img src="assets/img/photo1.png" alt="photo1" class="composition__photo composition__photo_n1">
+                        <img src="assets/img/photo2.png" alt="photo2" class="composition__photo composition__photo_n2">
+                        <img src="assets/img/photo3.png" alt="photo3" class="composition__photo composition__photo_n3">
                     </div>
                 </div>
-            </section>
-        </main>
-    </div>
+            </div>
+        </section>
+        <section class="adventure-section">
+            <div class="adventure-grid-container">
+                <div class="adventure-grid-item">
+                    <i class="icon-planet adventure-grid-item_icon margin-bottom-24px"></i>
+                    <h3 class="title-third margin-bottom-10px">ПРИКЛЮЧЕНИЕ</h3>
+                    <p class="adventure-grid-item_p margin-bottom-30px">Задача организации, в особенности же дальнейшее
+                        развитие различных в особенности же развитие различных</p>
+                </div>
+                <div class="adventure-grid-item">
+                    <i class="icon-location adventure-grid-item_icon margin-bottom-24px"></i>
+                    <h3 class="title-third margin-bottom-10px">ПРИКЛЮЧЕНИЕ</h3>
+                    <p class="adventure-grid-item_p margin-bottom-30px">Задача организации, в особенности же дальнейшее
+                        развитие различных в особенности же развитие различных</p>
+                </div>
+                <div class="adventure-grid-item">
+                    <i class="icon-compass adventure-grid-item_icon margin-bottom-24px"></i>
+                    <h3 class="title-third margin-bottom-10px">ПРИКЛЮЧЕНИЕ</h3>
+                    <p class="adventure-grid-item_p margin-bottom-30px">Задача организации, в особенности же дальнейшее
+                        развитие различных в особенности же развитие различных</p>
+                </div>
+                <div class="adventure-grid-item">
+                    <i class="icon-tree adventure-grid-item_icon margin-bottom-24px"></i>
+                    <h3 class="title-third margin-bottom-10px">ПРИКЛЮЧЕНИЕ</h3>
+                    <p class="adventure-grid-item_p margin-bottom-30px">Задача организации, в особенности же дальнейшее
+                        развитие различных в особенности же развитие различных</p>
+                </div>
+            </div>
+        </section>
+        <section class="popular-section">
+            <h3 class="title-third">НАИБОЛЕЕ ПОПУЛЯРНЫЕ ТУРЫ</h3>
+            <div class="popular-grid-container">
+
+            </div>
+        </section>
+    </main>
+</div>
 </body>
 </html>
