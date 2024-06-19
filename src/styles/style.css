@@ -208,6 +208,32 @@ body {
   transform: rotateY(0deg);
 }
 
+.booking-section {
+  background-color: #BA8554;
+}
+
+.footer {
+  padding: 8rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+  background-color: #333333;
+}
+.footer__wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+.footer__wrapper span {
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.936rem;
+  letter-spacing: 0.2rem;
+}
+
 /**keyframes**/
 @keyframes leftToRight {
   0% {

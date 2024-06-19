@@ -184,10 +184,12 @@ body {
   border-radius: .5rem;
   box-shadow: $box-shadow;
   text-align: center;
-  &:hover{
+
+  &:hover {
     transform: translateY(-1.5rem) scale(1.03);
     transition: 0.3s all;
   }
+
   &_icon {
     display: inline-block;
     font-size: 6rem;
@@ -195,7 +197,8 @@ body {
     -webkit-background-clip: text;
     color: transparent;
   }
-  &_p{
+
+  &_p {
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 1.9rem;
@@ -203,42 +206,81 @@ body {
     color: $color-grey;
   }
 }
-.popular-section{
+
+.popular-section {
 
 }
-.popular-grid-container{
+
+.popular-grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 3rem;
 }
-.popular-grid-item{
-  &__side{
-    &_img{
+
+.popular-grid-item {
+  &__side {
+    &_img {
     }
-    &_title{
+
+    &_title {
 
     }
-    &_text{
+
+    &_text {
 
     }
-    &_front{
-    background-color: greenyellow;
+
+    &_front {
+      background-color: greenyellow;
     }
-    &_back{
+
+    &_back {
       background-color: $color-brown-normal;
       transform: rotateY(180deg);
     }
-    &:hover &__side_front{
+
+    &:hover &__side_front {
       transform: rotateY(180deg);
     }
-    &:hover &__side_back{
+
+    &:hover &__side_back {
       transform: rotateY(0deg);
     }
   }
+}
 
+.review-section {
 
 }
 
+.booking-section {
+  background-color: $color-brown-normal;
+}
+.footer{
+  padding: 8rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:5rem;
+  img{
+
+  }
+  background-color: #333333;
+  &__wrapper{
+    span{
+      font-size: 1.6rem;
+      font-weight: 300;
+      line-height: 1.936rem;
+      letter-spacing: .2rem;
+
+    }
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+  }
+}
 /**keyframes**/
 @keyframes leftToRight {
   0% {
