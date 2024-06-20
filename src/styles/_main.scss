@@ -221,6 +221,112 @@ body {
   height: 50rem;
   perspective: 150rem;
   position: relative;
+  box-shadow: $box-shadow;
+
+  &__img {
+    height: 21rem;
+    background: $color-brown-normal url(../assets/img/popular1.jpg) center / cover no-repeat;
+    background-blend-mode: hard-light;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+  }
+
+  &__img2 {
+    height: 21rem;
+    background: $color-brown-normal url(../assets/img/popular2.jpg) center / cover no-repeat;
+    background-blend-mode: hard-light;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+  }
+
+  &__img3 {
+    height: 21rem;
+    background: $color-brown-normal url(../assets/img/popular3.jpg) center / cover no-repeat;
+    background-blend-mode: hard-light;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+  }
+
+  &__title {
+    position: relative;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    line-height: 3.3rem;
+    letter-spacing: .2rem;
+    color: $color-white;
+    text-align: right;
+  }
+
+  &__span {
+
+    background: linear-gradient(90deg, $color-brown-normal, $color-brown-black);
+
+    &_first {
+      padding: 1.1rem 1.8rem 0 1.8rem;
+      position: absolute;
+      top: -50px;
+      left: 125px;
+    }
+
+    &_first2 {
+      padding: 0 1.8rem 1rem 1.8rem;
+      position: absolute;
+      top: -6px;
+      left: 231px;
+    }
+
+    &_second {
+      padding: 1.1rem 1.8rem 0 1.8rem;
+      position: absolute;
+      top: -50px;
+      left: 168px;
+    }
+
+    &_second2 {
+      padding: 0 1.8rem 1rem 1.8rem;
+      position: absolute;
+      top: -6px;
+      left: 233px;
+    }
+
+    &_third {
+      padding: 1.1rem 1.8rem 0 1.8rem;
+      position: absolute;
+      top: -50px;
+      left: 116px;
+    }
+
+    &_third2 {
+      padding: 0 1.8rem 1rem 1.8rem;
+      position: absolute;
+      top: -6px;
+      left: 142px;
+    }
+  }
+
+
+  &__text {
+
+    > ul {
+      list-style: none;
+      margin: 0 auto;
+      width: 77%;
+
+      li {
+        margin-bottom: 2rem;
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 1.9rem;
+        letter-spacing: .2rem;
+        text-align: center;
+        color: $color-grey;
+        border-bottom: 1px solid $color-grey;
+
+        &:not(:last-child) {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+
   &__side {
     height: 50rem;
     transition: .7s all ease-out;
@@ -230,26 +336,56 @@ body {
     left: 0;
     width: 100%;
     backface-visibility: hidden;
-    &_img {
-    }
-
-    &_title {
-    }
-
-    &_text {
-    }
 
     &_front {
-      background-color: greenyellow;
+      background-color: $color-white;
     }
 
     &_back {
-      background:linear-gradient(120deg,rgba($color-brown-normal, 0.7) 0.03%, rgba($color-brown-black,0.7) 99.94%);
+      background: linear-gradient(120deg, rgba($color-brown-normal, 0.7) 0.03%, rgba($color-brown-black, 0.7) 99.94%);
       transform: rotateY(180deg);
+
+      &_box {
+        padding: 10rem 3.2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8rem;
+        > h4 {
+          font-size: 1.6rem;
+          font-weight: 300;
+          line-height: 1.9rem;
+          letter-spacing: .2rem;
+          color: $color-white;
+        }
+
+        > span {
+          font-size: 6rem;
+          font-weight: 500;
+          line-height: 7.2rem;
+          letter-spacing:.2rem;
+          color: $color-white;
+        }
+
+        > button {
+          border-radius: 1.5rem;
+          border: none;
+          background-color: $color-white;
+          padding: 1.5rem 2.1rem;
+          font-size: 2rem;
+          font-weight: 600;
+          line-height: 2.4rem;
+          letter-spacing: .5rem;
+          color: $color-grey;
+          box-shadow:$box-shadow;
+        }
+      }
     }
   }
+
   &:hover &__side_front {
-    transform: rotateY(180deg);
+    transform: rotateY(-180deg);
   }
 
   &:hover &__side_back {
