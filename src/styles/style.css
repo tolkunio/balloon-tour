@@ -194,17 +194,32 @@ body {
   column-gap: 3rem;
 }
 
+.popular-grid-item {
+  height: 50rem;
+  perspective: 150rem;
+  position: relative;
+}
+.popular-grid-item__side {
+  height: 50rem;
+  transition: 0.7s all ease-out;
+  color: #777777;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backface-visibility: hidden;
+}
 .popular-grid-item__side_front {
   background-color: greenyellow;
 }
 .popular-grid-item__side_back {
-  background-color: #BA8554;
+  background: linear-gradient(120deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(161, 79, 3, 0.7) 99.94%);
   transform: rotateY(180deg);
 }
-.popular-grid-item__side:hover .popular-grid-item__side__side_front {
+.popular-grid-item:hover .popular-grid-item__side_front {
   transform: rotateY(180deg);
 }
-.popular-grid-item__side:hover .popular-grid-item__side__side_back {
+.popular-grid-item:hover .popular-grid-item__side_back {
   transform: rotateY(0deg);
 }
 
