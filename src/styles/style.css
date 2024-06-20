@@ -98,8 +98,8 @@ body {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 6rem;
+  grid-template-columns: 1.2fr 1fr;
+  column-gap: 10rem;
 }
 
 .title-third {
@@ -122,7 +122,10 @@ body {
   position: relative;
 }
 .composition__photo {
-  width: 55%;
+  width: 50%;
+  height: 20rem;
+  object-fit: cover;
+  overflow: hidden;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.5);
   border-radius: 0.5rem;
   position: absolute;
@@ -143,7 +146,7 @@ body {
 .composition__photo:hover {
   transform: scale(1.1);
   z-index: 20;
-  outline: 0.5rem solid #BA8554;
+  outline: 0.1rem solid #777777;
 }
 .composition:hover .composition__photo:not(:hover) {
   transform: scale(0.95);
@@ -151,7 +154,7 @@ body {
 
 .adventure-section {
   padding: 21rem 0;
-  background: linear-gradient(90deg, rgba(105, 71, 40, 0.5) -0.81%, rgba(8, 8, 8, 0) -0.8%), url(../assets/img/adventure-background.jpg) center/cover no-repeat;
+  background: linear-gradient(90deg, rgba(105, 71, 40, 0.5) -0.81%, rgba(8, 8, 8, 0) -0.8%), url(../assets/img/background-tour.jpg) center/cover no-repeat;
   clip-path: polygon(0 0, 100% 9%, 100% 99%, 0 89%);
 }
 
@@ -188,6 +191,10 @@ body {
   color: #777777;
 }
 
+.popular-section {
+  position: relative;
+}
+
 .popular-grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -198,25 +205,24 @@ body {
   height: 50rem;
   perspective: 150rem;
   position: relative;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.5);
 }
 .popular-grid-item__img {
   height: 21rem;
-  background: #BA8554 url(../assets/img/popular1.jpg) center/cover no-repeat;
-  background-blend-mode: hard-light;
+  background: #BA8554 url(../assets/img/card1.jpg) center/cover no-repeat;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+  background-blend-mode: hard-light;
 }
 .popular-grid-item__img2 {
   height: 21rem;
-  background: #BA8554 url(../assets/img/popular2.jpg) center/cover no-repeat;
-  background-blend-mode: hard-light;
+  background: #BA8554 url(../assets/img/card2.jpg) center/cover no-repeat;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+  background-blend-mode: hard-light;
 }
 .popular-grid-item__img3 {
   height: 21rem;
-  background: #BA8554 url(../assets/img/popular3.jpg) center/cover no-repeat;
-  background-blend-mode: hard-light;
+  background: #BA8554 url(../assets/img/card3.jpg) center/cover no-repeat;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+  background-blend-mode: hard-light;
 }
 .popular-grid-item__title {
   position: relative;
@@ -425,6 +431,10 @@ body {
 
 .margin-bottom-10px {
   margin-bottom: 1rem;
+}
+
+.text-align-center {
+  text-align: center;
 }
 
 .btn {
