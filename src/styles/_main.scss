@@ -109,9 +109,6 @@ body {
   }
 }
 
-.booking-title {
-  padding: 2rem 29rem 0 5rem;
-}
 
 .grid-container {
   display: grid;
@@ -498,11 +495,11 @@ body {
 }
 
 .booking-section {
-  padding: 10rem;
+  padding: 8rem;
   background: linear-gradient(90deg, $color-brown-normal, $color-brown-black);
 
   &__book {
-    height: 50rem;
+    height: 60rem;
     background: linear-gradient(141deg, rgba(255, 255, 255, 0.90) 57%, rgba(186, 133, 84, -0.1) 57%, rgba(161, 79, 3, 0.9) 100%), url(../assets/img/booking.jpg) center / cover no-repeat;
     box-shadow: $box-shadow;
     border-radius: .5rem;
@@ -513,14 +510,14 @@ body {
     padding: 3rem 5rem 5rem 5rem;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2rem;
   }
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 1.1rem;
+  gap:1rem;
 
   &__input {
     width: 55%;
@@ -535,7 +532,8 @@ body {
     padding: 1.8rem 0 1.8rem 1.8rem;
     border-radius: .3rem;
   }
-  &__label{
+
+  &__label {
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 1.92rem;
@@ -582,57 +580,97 @@ body {
 }
 
 .radio-group {
+  padding-left: 3rem;
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 2.4rem;
 
-  > .radio {
+  .radio {
+    position: relative;
+    padding-left: 1rem;
     display: flex;
     flex-direction: row;
-    gap: .8rem;
+    gap: 2rem;
+
+    &__input {
+      display: none;
+      cursor: pointer;
+    }
+
+    &__input:checked + .radio__label .radio__circle::after {
+      opacity: 1;
+    }
+
+    &__label {
+      position: relative;
+      font-size: 1.6rem;
+      font-weight: 400;
+      line-height: 1.92rem;
+      letter-spacing: .2rem;
+    }
+
+
+    &__circle {
+      position: absolute;
+      top: -.3rem;
+      left: -4rem;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      border: .5rem solid $color-brown-normal;
+      display: block;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        background-color: $color-brown-normal;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: .3s all;
+      }
+    }
   }
-
-  #radio-group-input {
-
-  }
-
-  #radio-indiv-input {
-
-  }
-}
-
-.btn-booking {
-  background-color: $color-brown-normal;
 }
 
 .footer {
-  padding: 8rem 2rem;
+  padding: 4rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5rem;
-
-  img {
-
-  }
-
+  gap: 4rem;
+  color: $color-white;
   background-color: #333333;
 
+  &__img {
+    width: 12rem;
+  }
+
   &__wrapper {
-    span {
-      font-size: 1.6rem;
-      font-weight: 300;
-      line-height: 1.936rem;
-      letter-spacing: .2rem;
-
-    }
-
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 5rem;
+
+    span {
+      font-size: 1.6rem;
+      font-weight: 300;
+      line-height: 1.936rem;
+      letter-spacing: .2rem;
+      transition: .5s ease-out;
+      &:hover{
+        transform: translateY(-.5rem);
+      }
+    }
+
+
   }
 }
 

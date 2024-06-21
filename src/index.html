@@ -215,7 +215,7 @@
         </section>
         <section class="booking-section">
             <div class="booking-section__book">
-                <h3 class="title-secondary booking-title">ЗАБРОНИРОВАТЬ ТУР</h3>
+                <h3 class="title-secondary margin-top-30px text-align-left">ЗАБРОНИРОВАТЬ ТУР</h3>
                 <form class="booking-section__form">
                     <div class="form-group">
                         <input class="form-group__input" type="text" placeholder="Ivan Ivanov" id="name" required>
@@ -227,12 +227,18 @@
                     </div>
                     <div class="radio-group">
                         <div class="radio">
-                            <input type="radio" id="radio-group-input">
-                            <label for="radio-group-input" >Групповой тур</label>
+                            <input type="radio" id="radio-group-input" name="tour" class="radio__input">
+                            <label for="radio-group-input" class="radio__label">
+                                <span class="radio__circle"></span>
+                                Групповой тур
+                            </label>
                         </div>
                         <div class="radio">
-                            <input type="radio" id="radio-indiv-input">
-                            <label for="radio-indiv-input">Индивидуальный тур</label>
+                            <input type="radio" id="radio-indiv-input" name="tour" class="radio__input">
+                            <label for="radio-indiv-input" class="radio__label">
+                                <span class="radio__circle"></span>
+                                Индивидуальный тур
+                            </label>
                         </div>
                     </div>
                     <button class="btn-booking">Забронировать</button>
@@ -241,7 +247,7 @@
         </section>
     </main>
     <footer class="footer">
-        <img src="assets/img/footer-ballon.png" alt="footer">
+        <img src="assets/img/footer-ballon.png" alt="footer" class="footer_img">
         <div class="footer__wrapper">
             <span>О НАС</span>
             <span>СКИДКИ</span>
