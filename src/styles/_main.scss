@@ -78,6 +78,13 @@ body {
     animation-delay: 2s;
     backface-visibility: hidden;
     margin-bottom: 6.5rem;
+
+    @media (max-width: 900px) {
+      font-size: 3rem;
+    }
+    @media (max-width: 600px) {
+      font-size: 2.5rem;
+    }
   }
 }
 
@@ -185,8 +192,15 @@ body {
 .adventure-grid-container {
   padding: 10rem 5rem;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns:repeat(4, 1fr);
   grid-gap: 3rem;
+  @media (max-width: 900px) {
+    grid-template-columns:repeat(2, 1fr);
+  }
+  @media (max-width: 600px) {
+    grid-template-columns:repeat(1, 1fr);
+  }
+
 }
 
 .adventure-grid-item {
@@ -224,7 +238,7 @@ body {
 
 .popular-grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   column-gap: 3rem;
 }
 
@@ -711,31 +725,31 @@ body {
     border-radius: 50%;
     position: fixed;
     top: 8rem;
-    right: 7rem;
+    right: 10rem;
     z-index: 200;
     text-align: center;
   }
 
   &__button:hover &__icon::before {
-    top: -10px;
+    top: -1rem;
   }
 
   &__button:hover &__icon::after {
-    top: 10px;
+    top: 1rem;
   }
 
   &__icon {
     cursor: pointer;
     position: relative;
-    margin-top: 35px;
-    margin-left: 20px;
+    margin-top: 3.5rem;
+    margin-left: 2rem;
 
     &,
     &::before,
     &:after {
       content: "";
-      width: 30px;
-      height: 2px;
+      width: 3rem;
+      height: .2rem;
       background-color: $color-black;
       display: inline-block;
       position: absolute;
@@ -743,11 +757,11 @@ body {
     }
 
     &::before {
-      top: -8px;
+      top: -.8rem;
     }
 
     &:after {
-      top: 8px;
+      top: 0.8rem;
     }
 
   }
@@ -758,11 +772,10 @@ body {
     border-radius: 50%;
     background: radial-gradient($color-brown-normal, $color-brown-black);
     position: fixed;
-    right: 7rem;
+    right: 11rem;
     top: 9rem;
     z-index: 100;
     transition: .5s all;
-
   }
 
   &__nav {
@@ -809,6 +822,91 @@ body {
       background-position: 100%;
       color: $color-brown-normal;
       transform: translateX(1rem);
+    }
+  }
+}
+
+/**media quieries**/
+@media (max-width: 1800px) {
+  .title-first__main {
+    font-size: 7rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .adventure-grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .title-first {
+
+    &__main {
+      font-size: 4rem;
+    }
+  }
+  .title-secondary{
+    font-size: 2.6rem;
+  }
+  .grid-container {
+    margin-bottom: 30rem;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 5rem;
+  }
+  .adventure-section {
+    padding: 0;
+  }
+  .adventure-grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .popular-grid-container {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 5rem;
+  }
+  .booking-section {
+    .title-secondary {
+      font-size: 2rem;
+      letter-spacing: .4rem;
+    }
+  }
+  .feedback-section__grid_item {
+    width: 80%;
+    padding: 4rem;
+  }
+  .footer__wrapper {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 600px) {
+  .title-first {
+
+    &__main {
+      font-size: 3rem;
+    }
+  }
+  .title-secondary{
+    font-size: 1.6rem;
+  }
+  .adventure-grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .feedback-section__grid_item {
+    width: 100%;
+    padding: 2rem;
+  }
+  .feedback-section__grid_item-img {
+    display: none;
+  }
+  .booking-section {
+    padding:1rem;
+    .title-secondary {
+      font-size: 2rem;
+      letter-spacing: .4rem;
+    }
+    &__form{
+      padding: 1rem 2rem;
     }
   }
 }

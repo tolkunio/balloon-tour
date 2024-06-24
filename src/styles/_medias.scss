@@ -1,0 +1,33 @@
+/*
+   phone 600
+   tab-port 900
+   tab-land 1200
+   big-screen 1800
+   */
+@media (max-width: 1800px) {
+  .title-first__main{
+      font-size: 7rem;
+  }
+}
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 900px) {
+  .title-first {
+
+    &__main {
+      font-size: 4rem;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .title-first {
+
+    &__main {
+      font-size: 3rem;
+    }
+  }
+}
