@@ -499,7 +499,7 @@ body {
   background: linear-gradient(90deg, $color-brown-normal, $color-brown-black);
 
   &__book {
-    height: 60rem;
+    height: 50rem;
     background: linear-gradient(141deg, rgba(255, 255, 255, 0.90) 57%, rgba(186, 133, 84, -0.1) 57%, rgba(161, 79, 3, 0.9) 100%), url(../assets/img/booking.jpg) center / cover no-repeat;
     box-shadow: $box-shadow;
     border-radius: .5rem;
@@ -517,7 +517,7 @@ body {
 .form-group {
   display: flex;
   flex-direction: column;
-  gap:1rem;
+  gap: 1rem;
 
   &__input {
     width: 55%;
@@ -665,12 +665,151 @@ body {
       line-height: 1.936rem;
       letter-spacing: .2rem;
       transition: .5s ease-out;
-      &:hover{
+
+      &:hover {
+        color: $color-brown-normal;
         transform: translateY(-.5rem);
       }
     }
 
 
+  }
+}
+
+.navigation {
+  &__toggle {
+    display: none;
+  }
+
+  &__toggle:checked + &__button &__icon {
+    background: transparent;
+  }
+
+  &__toggle:checked + &__button &__icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  &__toggle:checked + &__button &__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+
+  &__toggle:checked ~ &__background {
+    transform: scale(80);
+  }
+
+  &__toggle:checked ~ &__nav {
+    width: 100%;
+    opacity: 1;
+  }
+
+  &__button {
+    background-color: $color-white;
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 8rem;
+    right: 7rem;
+    z-index: 200;
+    text-align: center;
+  }
+
+  &__button:hover &__icon::before {
+    top: -10px;
+  }
+
+  &__button:hover &__icon::after {
+    top: 10px;
+  }
+
+  &__icon {
+    cursor: pointer;
+    position: relative;
+    margin-top: 35px;
+    margin-left: 20px;
+
+    &,
+    &::before,
+    &:after {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background-color: $color-black;
+      display: inline-block;
+      position: absolute;
+      left: 0;
+    }
+
+    &::before {
+      top: -8px;
+    }
+
+    &:after {
+      top: 8px;
+    }
+
+  }
+
+  &__background {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background: radial-gradient($color-brown-normal, $color-brown-black);
+    position: fixed;
+    right: 7rem;
+    top: 9rem;
+    z-index: 100;
+    transition: .5s all;
+
+  }
+
+  &__nav {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 150;
+    opacity: 0;
+    width: 0;
+    transition: .5s all cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  }
+
+  &__list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    width: 100%;
+  }
+
+  &__item {
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 1rem 1rem;
+    color: $color-white;
+    font-size: 3rem;
+    text-decoration: none;
+    letter-spacing: .5rem;
+    text-transform: uppercase;
+    background: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
+    background-size: 220%;
+    transition: all .4s;
+
+    &:hover {
+      background-position: 100%;
+      color: $color-brown-normal;
+      transform: translateX(1rem);
+    }
   }
 }
 
