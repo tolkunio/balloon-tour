@@ -1,5 +1,18 @@
 {
   "dependencies": {
     "sass": "^1.75.0"
-  }
+  },
+  "name": "balloon-app",
+  "version": "1.0.0",
+  "main": "index.html",
+  "devDependencies": {
+    "gulp": "^5.0.0"
+  },
+  "scripts": {
+    "build": "node-sass --output-style compressed -o dist src",
+    "start": "node-sass --watch --ounpm run buildtput-style compressed -o dist src"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
