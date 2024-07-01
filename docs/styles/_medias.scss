@@ -8,17 +8,21 @@
   .title-first__main{
       font-size: 7rem;
   }
+
 }
 
 @media (max-width: 1200px) {
-
+  .title-first__main{
+    font-size: 4rem;
+  }
 }
 
 @media (max-width: 900px) {
   .title-first {
-
     &__main {
-      font-size: 4rem;
+      font-size: 3rem;
+      line-height: 3rem;
+      letter-spacing: 1rem;
     }
   }
 }
@@ -27,7 +31,9 @@
   .title-first {
 
     &__main {
-      font-size: 3rem;
+      font-size: 2.5rem;
+      line-height: 2rem;
+      letter-spacing: 1rem;
     }
   }
 }

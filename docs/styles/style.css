@@ -9,14 +9,23 @@
     font-size: 7rem;
   }
 }
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
   .title-first__main {
     font-size: 4rem;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .title-first__main {
     font-size: 3rem;
+    line-height: 3rem;
+    letter-spacing: 1rem;
+  }
+}
+@media (max-width: 600px) {
+  .title-first__main {
+    font-size: 2.5rem;
+    line-height: 2rem;
+    letter-spacing: 1rem;
   }
 }
 *, ::after, ::before {
@@ -61,7 +70,7 @@ body {
 .header__box {
   position: absolute;
   left: 50%;
-  top: 40%;
+  top: 63%;
   transform: translate(-50%, -50%);
   width: 100%;
   text-align: center;
